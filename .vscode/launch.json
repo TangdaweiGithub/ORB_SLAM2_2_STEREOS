@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "2_stereos",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/Examples/ROS/ORB_SLAM2/build/ros_2_stereos",
+            "args": [
+                "${workspaceFolder}/Vocabulary/ORBvoc.bin",
+                "${workspaceFolder}/Examples/ROS/ORB_SLAM2/DD435i.yaml",
+                "true", // use Viewer
+                "false", // do load map
+                "false"  // relocation
+            ],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // "preLaunchTask": "orbslam2",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "console": "internalConsole"
+        }
+    ]
+}
