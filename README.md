@@ -248,7 +248,7 @@ You can load ORB vocabulary in either text or binary format. The format is deter
 
 PS: binary format is loaded faster and text format is more human-readable.
 
-# 11. Saving and Loading Map (My Developement)
+# 11. Saving and Loading Map (BoomFan Developement)
 Based on tutorials on the internet, I edited several files in the `include` folder and the `src` folder. Then I edited `Examples/Monocular/mono_kitti.cc` file, and use `KITTI dataset 08` as my debugging exmaple.
 
 Now, saving and loading function may already work for stereo camera and monocular camera for KITTI dataset. I'm not planning to test other dataset. You are always welcome to right a pull request.
@@ -269,4 +269,10 @@ When you are asked `Do you want to save the map?(y/n)`. Just type in `y` or `Y` 
 
 ### Load Map
 After all images are processed, command line will show `Do you want to save the map?(y/n)`, Just type in `y` or `Y` then hit `enter` to load a map. The program will load a binary file named `MapPointandKeyFrame.bin` automatically.
-# ORB_SLAM2_2_STEREOS
+
+# 12. Front and Back Stereos (My Development)
+Based on the work of [BoomFran](https://github.com/BoomFan/ORB_SLAM2), I introduced one more tracker, ORBextractor and localmapper. 
+
+Since we are using the ros-launch method and RealSense cameras, I put the modified launch file below. You need to put the 'rs_multi_camera.launch' into the ros launch directory, and modified the serial number based on your camera.
+
+
