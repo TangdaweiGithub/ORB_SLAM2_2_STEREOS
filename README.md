@@ -275,4 +275,9 @@ Based on the work of [BoomFran](https://github.com/BoomFan/ORB_SLAM2), I introdu
 
 Since we are using the ros-launch method and RealSense cameras, I put the modified launch file below. You need to put the 'rs_multi_camera.launch' into the ros launch directory, and modified the serial number based on your camera.
 
+### Example Command
+```
+cd ~/$XXXX$/ORB_SLAM2
+./Examples/Ros/ORB_SLAM2/build/ros_2_stereos.cc Vocabulary/ORBvoc.txt Examples/ROS/ORB_SLAM2/DD435i.yaml true false false
+```
 
